@@ -1,0 +1,12 @@
+{
+  "name": "spatial_audio",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "dev": "http-server . -c-1"
+  },
+  "dependencies": {
+    "http-server": "^14.1.1"
+  }
+}

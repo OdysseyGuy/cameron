@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="Cache-control" content="no-cache, no-store, must-revalidate" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="src/css/style.css" />
+    <title>Face Landmarks</title>
+  </head>
+  <body>
+    <button id="webcamButton">Start Video</button>
+    <video id="webcam" autoplay playsinline>
+      Your browser doesn't support the video element. Sorry.
+    </video>
+    <table>
+      <tr>
+        <td>Yaw</td>
+        <td id="yaw-val">0.0</td>
+      </tr>
+      <tr>
+        <td>Pitch</td>
+        <td id="pitch-val">0.0</td>
+      </tr>
+      <tr>
+        <td>Roll</td>
+        <td id="roll-val">0.0</td>
+      </tr>
+    </table>
+    <script type="module" src="src/js/index.js"></script>
+    <audio autoplay="false" controls crossorigin="anonymous" loop id="audio-player">
+      <source src="assets/audio/tessa.mp3" type="audio/mpeg" />
+      Your browser does't support the audio element. Sorry.
+    </audio>
+    <div>
+      <button id="power-btn" data-power="off">Power: off</button>
+      <button id="play-btn" data-playing="false">Play</button>
+      <button id="tracking-btn" data-tracking="off">Head Tracking: off</button>
+    </div>
+    <label>Crossover frequency (in Hz)</label>
+    <input type="number" id="crs-freq" value="200" />
+    <input type="range" id="x-pos" min="-90" max="90" value="0" step="0.1" />
+    <input type="range" id="y-pos" min="0" max="180" value="0" step="0.01" />
+  </body>
+</html>
